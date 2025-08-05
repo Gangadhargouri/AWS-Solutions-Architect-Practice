@@ -1,4 +1,11 @@
+
+image:
+  file: .gitpod.Dockerfile
 tasks:
+  - name: Configure AWS
+    init: aws --version
+    command: |
+      echo "To configure AWS, run: aws configure"
   - name: aws-cli
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
